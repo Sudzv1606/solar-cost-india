@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Insights Demo | Solar Cost India</title>
+    <link rel="stylesheet" href="/css/styles.css">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://solarcostindia.com/smart-insights-demo.html">
+    <meta property="og:title" content="Smart Insights Demo - Solar Cost India">
+    <meta property="og:description"
+        content="Enterprise-grade governance for solar content generation. See how our smart insight system ensures compliance and accuracy.">
+    <meta property="og:image" content="https://solarcostindia.com/images/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://solarcostindia.com/smart-insights-demo.html">
+    <meta property="twitter:title" content="Smart Insights Demo - Solar Cost India">
+    <meta property="twitter:description" content="Enterprise-grade governance for solar content generation.">
+    <meta property="twitter:image" content="https://solarcostindia.com/images/og-image.jpg">
+    <style>
+        .demo-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .engine-test {
+            background: #f8f9fa;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            border: 1px solid #dee2e6;
+        }
+
+        .test-button {
+            background: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        .test-button:hover {
+            background: #0056b3;
+        }
+
+        .test-result {
+            background: white;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border-left: 4px solid #28a745;
+        }
+
+        .qa-pass {
+            border-left-color: #28a745;
+        }
+
+        .qa-fail {
+            border-left-color: #dc3545;
+        }
+
+        .template-preview {
+            background: #fff;
+            padding: 20px;
+            margin: 20px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .violations {
+            color: #dc3545;
+            margin-top: 10px;
+        }
+
+        .violations ul {
+            margin: 5px 0;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <h1><a href="/" class="logo-link">Solar Cost India</a></h1>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/solar-calculator.html">Calculator</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Smart Insights Demo</h1>
+                <p>Enterprise-grade governance for solar content generation</p>
+            </div>
+        </section>
+
+        <div class="demo-container">
+            <h2>Test the Smart Insights System</h2>
+            <p>This page demonstrates the multi-engine system with QA validation for generating compliant solar content.
+            </p>
+
+            <!-- Engine 1 Test -->
+            <div class="engine-test">
+                <h3>🧩 Engine 1: National Content Strategist</h3>
+                <p>Generates pillar-level content for India</p>
+                <button class="test-button" onclick="testEngine('Solar_Pillar_Content_Engine')">
+                    Generate National Content
+                </button>
+                <div id="result1" class="test-result" style="display: none;"></div>
+            </div>
+
+            <!-- Engine 2 Test -->
+            <div class="engine-test">
+                <h3>🧩 Engine 2: Calculator Insight Engine</h3>
+                <p>Explains calculator outputs with proper disclaimers</p>
+                <button class="test-button" onclick="testEngine('Calculator_Insight_Engine')">
+                    Explain Calculator Results
+                </button>
+                <div id="result2" class="test-result" style="display: none;"></div>
+            </div>
+
+            <!-- Engine 3 Test -->
+            <div class="engine-test">
+                <h3>🧩 Engine 3: State & City Localizer</h3>
+                <p>Localizes content for specific regions</p>
+                <button class="test-button" onclick="testEngine('Solar_Localization_Engine')">
+                    Generate Localized Content
+                </button>
+                <div id="result3" class="test-result" style="display: none;"></div>
+            </div>
+
+            <!-- QA Test with Violation -->
+            <div class="engine-test">
+                <h3>🧪 Engine 4: QA & Compliance Guard</h3>
+                <p>Detects policy violations in content</p>
+                <button class="test-button" onclick="testQAFailure()">
+                    Test QA with Violations
+                </button>
+                <div id="result4" class="test-result" style="display: none;"></div>
+            </div>
+
+            <!-- Template Tests -->
+            <div class="engine-test">
+                <h3>📄 Content Templates</h3>
+                <p>Generate state and city pages using templates</p>
+                <button class="test-button" onclick="generateTemplate('statePage')">
+                    Generate State Page
+                </button>
+                <button class="test-button" onclick="generateTemplate('cityPage')">
+                    Generate City Page
+                </button>
+                <div id="templateResult" class="template-preview" style="display: none;"></div>
+            </div>
+
+            <!-- Session Report -->
+            <div class="engine-test">
+                <h3>📊 Session Report</h3>
+                <button class="test-button" onclick="showSessionReport()">
+                    Show Session Report
+                </button>
+                <div id="sessionReport" class="test-result" style="display: none;"></div>
+            </div>
+
+            <!-- Hardening Features Demo -->
+            <div class="engine-test">
+                <h3>🔧 Hardening Features Demo</h3>
+                <p>Test the new QA hardening: config citations, vocabulary checks</p>
+                <button class="test-button" onclick="testHardening()">
+                    Test Hardening Features
+                </button>
+                <div id="hardeningResult" class="test-result" style="display: none;"></div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Load the Smart Insights system -->
+    <script src="/js/smart-insights.js"></script>
+    <script src="/js/content-templates.js"></script>
+
+    <script>
+        // Start a session when page loads
+        insightManager.startSession({
+            page: 'smart-insights-demo',
+            timestamp: new Date()
+        });
+
+        // Test individual engines
+        async function testEngine(engineCode) {
+            const resultDiv = document.getElementById('result' + (engineCode.includes('Pillar') ? '1' : engineCode.includes('Calculator') ? '2' : '3'));
+
+            try {
+                // Prepare inputs based on engine type
+                let inputs;
+                switch (engineCode) {
+                    case 'Solar_Pillar_Content_Engine':
+                        inputs = {
+                            topic: 'solar costs in India',
+                            targetAudience: 'homeowners',
+                            keyPoints: ['cost range', 'subsidy', 'payback']
+                        };
+                        break;
+                    case 'Calculator_Insight_Engine':
+                        inputs = {
+                            calculatorOutputs: {
+                                system: { recommendedKW: 3 },
+                                cost: { netRange: { low: 150000, high: 225000 } },
+                                financial: { paybackYears: { average: 4.5 } }
+                            },
+                            locationContext: 'national',
+                            configSource: 'national averages'
+                        };
+                        break;
+                    case 'Solar_Localization_Engine':
+                        inputs = {
+                            nationalContent: 'Solar costs in India range from...',
+                            locationConfig: {
+                                displayName: 'Maharashtra',
+                                costAboveNational: true,
+                                costDrivers: 'higher labor rates'
+                            },
+                            locationType: 'state'
+                        };
+                        break;
+                }
+
+                const result = await insightManager.executeEngine(engineCode, inputs);
+
+                resultDiv.style.display = 'block';
+                resultDiv.className = `test-result ${result.qa.status === 'PASS' ? 'qa-pass' : 'qa-fail'}`;
+
+                resultDiv.innerHTML = `
+                    <h4>Result from: ${result.engine}</h4>
+                    <p><strong>QA Status:</strong> ${result.qa.status}</p>
+                    <p><strong>Audit ID:</strong> ${result.qa.auditId}</p>
+                    ${result.qa.citations && result.qa.citations.length > 0 ? `
+                        <div style="margin: 10px 0;">
+                            <strong>Config Citations:</strong>
+                            <ul style="font-size: 0.9rem; color: #666;">
+                                ${result.qa.citations.map(c => `<li>${c.number} → ${c.source}</li>`).join('')}
+                            </ul>
+                        </div>
+                    ` : ''}
+                    ${result.qa.violations.length > 0 ? `
+                        <div class="violations">
+                            <strong>Violations:</strong>
+                            <ul>
+                                ${result.qa.violations.map(v => `<li>${v}</li>`).join('')}
+                            </ul>
+                        </div>
+                    ` : ''}
+                    <div class="content-preview">
+                        <strong>Generated Content:</strong>
+                        <div style="margin-top: 10px; padding: 10px; background: #f8f9fa; border-radius: 5px;">
+                            ${result.content}
+                        </div>
+                    </div>
+                `;
+            } catch (error) {
+                resultDiv.style.display = 'block';
+                resultDiv.className = 'test-result qa-fail';
+                resultDiv.innerHTML = `<p><strong>Error:</strong> ${error.message}</p>`;
+            }
+        }
+
+        // Test QA failure detection
+        async function testQAFailure() {
+            const resultDiv = document.getElementById('result4');
+
+            // Create content with violations
+            const badContent = `
+                <p>Guaranteed solar savings of ₹50,000 per year!</p>
+                <p>The final cost will be exactly ₹2,50,000 for a 5kW system.</p>
+                <p>You will receive the full subsidy amount.</p>
+            `;
+
+            // Run QA check
+            const qaResult = await insightManager.runQA(
+                INSIGHT_ENGINES.Solar_QA_Guard,
+                badContent,
+                { test: 'violations' }
+            );
+
+            resultDiv.style.display = 'block';
+            resultDiv.className = `test-result ${qaResult.status === 'PASS' ? 'qa-pass' : 'qa-fail'}`;
+
+            resultDiv.innerHTML = `
+                <h4>QA Check Result: ${qaResult.status}</h4>
+                ${qaResult.violations.length > 0 ? `
+                    <div class="violations">
+                        <strong>Detected Violations:</strong>
+                        <ul>
+                            ${qaResult.violations.map(v => `<li>${v}</li>`).join('')}
+                        </ul>
+                    </div>
+                ` : '<p>No violations detected</p>'}
+                <div style="margin-top: 10px;">
+                    <strong>Tested Content:</strong>
+                    <pre style="background: #f8f9fa; padding: 10px; border-radius: 5px;">${badContent}</pre>
+                </div>
+            `;
+        }
+
+        // Generate templates
+        function generateTemplate(templateName) {
+            const resultDiv = document.getElementById('templateResult');
+
+            try {
+                const sampleData = contentTemplateEngine.getSampleData(templateName);
+                const generatedContent = contentTemplateEngine.generate(templateName, sampleData);
+
+                resultDiv.style.display = 'block';
+                resultDiv.innerHTML = `
+                    <h4>Generated ${templateName === 'statePage' ? 'State' : 'City'} Page</h4>
+                    <p style="color: #666; margin-bottom: 20px;">
+                        Preview of generated page content (scroll to see more)
+                    </p>
+                    <iframe srcdoc="${generatedContent.replace(/"/g, '&quot;')}"
+                            style="width: 100%; height: 600px; border: 1px solid #ddd; border-radius: 5px;">
+                    </iframe>
+                `;
+            } catch (error) {
+                resultDiv.style.display = 'block';
+                resultDiv.innerHTML = `<p style="color: #dc3545;"><strong>Error:</strong> ${error.message}</p>`;
+            }
+        }
+
+        // Show session report
+        function showSessionReport() {
+            const reportDiv = document.getElementById('sessionReport');
+            const report = insightManager.getSessionReport();
+
+            reportDiv.style.display = 'block';
+            reportDiv.innerHTML = `
+                <h4>Session Report</h4>
+                <p><strong>Session ID:</strong> ${report.session?.id || 'N/A'}</p>
+                <p><strong>Start Time:</strong> ${report.session?.startTime || 'N/A'}</p>
+                <p><strong>Total Steps:</strong> ${report.totalSteps}</p>
+                <p><strong>Passed QA:</strong> ${report.passedSteps}</p>
+                <p><strong>Failed QA:</strong> ${report.totalSteps - report.passedSteps}</p>
+                <p><strong>Success Rate:</strong> ${report.totalSteps > 0 ? Math.round((report.passedSteps / report.totalSteps) * 100) : 0}%</p>
+            `;
+        }
+
+        // Test hardening features
+        async function testHardening() {
+            const resultDiv = document.getElementById('hardeningResult');
+
+            // Create content with test scenarios
+            const testContent = `
+                <p>Solar typically costs around ₹50,000 per kW in most regions.</p>
+                <p>This is often subject to market conditions and may vary.</p>
+                <p>BEST option guaranteed at exact price!</p>
+            `;
+
+            // Run QA with all checks
+            const qaResult = await insightManager.runQA(
+                INSIGHT_ENGINES.Solar_Pillar_Content_Engine,
+                testContent,
+                {
+                    calculatorOutputs: {
+                        cost: { netRange: { low: 150000, high: 225000 } }
+                    },
+                    locationConfig: {
+                        cost_per_kw_low: 45000,
+                        cost_per_kw_high: 85000
+                    }
+                }
+            );
+
+            resultDiv.style.display = 'block';
+            resultDiv.className = `test-result ${qaResult.status === 'PASS' ? 'qa-pass' : 'qa-fail'}`;
+
+            resultDiv.innerHTML = `
+                <h4>Hardening QA Check: ${qaResult.status}</h4>
+
+                <div style="margin: 15px 0;">
+                    <strong>📍 Config Citations Found:</strong>
+                    ${qaResult.citations.length > 0 ? `
+                        <ul style="font-size: 0.9rem;">
+                            ${qaResult.citations.map(c => `<li>₹X,X → ${c.source}</li>`).join('')}
+                        </ul>
+                    ` : '<p style="color: #666; font-style: italic;">None detected</p>'}
+                </div>
+
+                <div style="margin: 15px 0;">
+                    <strong>📝 Vocabulary Analysis:</strong>
+                    ${qaResult.citations && qaResult.citations.length > 0 ? `
+                        <ul style="font-size: 0.9rem;">
+                            ${qaResult.citations.map(c => c.source).map(s => `<li>Safe words detected in context</li>`).join('')}
+                        </ul>
+                    ` : ''}
+                </div>
+
+                <div style="margin: 15px 0;">
+                    <strong>⚠️ Violations:</strong>
+                    ${qaResult.violations.length > 0 ? `
+                        <div class="violations">
+                            <ul>
+                                ${qaResult.violations.map(v => `<li>${v}</li>`).join('')}
+                            </ul>
+                        </div>
+                    ` : '<p style="color: #28a745;">✅ No violations detected</p>'}
+                </div>
+
+                <div style="margin-top: 15px;">
+                    <strong>Audit ID:</strong> ${qaResult.auditId}
+                </div>
+
+                <div style="margin-top: 10px; padding: 10px; background: #f8f9fa; border-radius: 5px;">
+                    <strong>Tested Content:</strong>
+                    <pre style="margin-top: 5px; font-size: 0.85rem;">${testContent}</pre>
+                </div>
+            `;
+        }
+
+        // Page load message
+        console.log('Smart Insights System Demo Loaded');
+        console.log('Available engines:', Object.keys(INSIGHT_ENGINES));
+        console.log('Hardening features:', ['Config citations', 'Vocabulary validation', 'Data freshness']);
+    </script>
+</body>
+
+</html>

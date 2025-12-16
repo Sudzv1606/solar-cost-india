@@ -1,0 +1,89 @@
+/* Insider / Regulation Box Styles */
+
+.insider-box {
+    background-color: #fff9db;
+    /* Light Yellow */
+    border-left: 5px solid #f1c40f;
+    /* Strong Yellow/Orange */
+    padding: 1.5rem;
+    margin: 2rem 0;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    font-family: 'Segoe UI', sans-serif;
+    color: #444;
+}
+
+.insider-header {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.insider-icon {
+    font-size: 1.5rem;
+}
+
+.insider-header h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #795548;
+    /* Brownish text for contrast on yellow */
+    font-weight: 600;
+}
+
+.insider-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.insider-note {
+    border-bottom: 1px dashed #eaddb6;
+    padding: 0.8rem 0;
+    display: flex;
+    gap: 10px;
+}
+
+.insider-note:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.note-title {
+    font-weight: 700;
+    color: #5d4037;
+    min-width: 120px;
+    font-size: 0.95rem;
+}
+
+.note-message {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #333;
+}
+
+.insider-footer {
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    color: #8d6e63;
+    font-style: italic;
+    text-align: right;
+}
+
+/* Calculator Integration specific tweaks */
+.calculator-results .insider-box {
+    margin: 1.5rem 0 0 0;
+    /* Tighter layout for calculator */
+}
+
+@media (max-width: 600px) {
+    .insider-note {
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .note-title {
+        min-width: auto;
+    }
+}

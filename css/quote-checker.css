@@ -1,0 +1,264 @@
+/* 
+========================================
+Quote Checker Page Styles
+========================================
+*/
+
+.hero-small {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 6rem 0 3rem;
+    /* Reduced padding compared to main hero */
+    text-align: center;
+}
+
+.hero-small h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-small p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.checker-tool {
+    padding: 3rem 0;
+    min-height: 60vh;
+}
+
+.checker-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.data-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    border: 1px solid #eee;
+}
+
+.data-card.hidden {
+    display: none;
+}
+
+.input-card .card-header {
+    margin-bottom: 2rem;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 1rem;
+}
+
+.input-card h2 {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+}
+
+.full-width {
+    width: 100%;
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    padding: 1rem;
+}
+
+.trust-micro {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #888;
+}
+
+/* Result Styles */
+
+.verdict-card {
+    background: #fdfdfd;
+    /* Border top handled dynamically in JS */
+}
+
+.verdict-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.verdict-icon {
+    font-size: 2rem;
+}
+
+.verdict-header h3 {
+    font-size: 1.8rem;
+    margin: 0;
+    color: var(--secondary-color);
+}
+
+.verdict-message {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px dashed #ddd;
+}
+
+/* Range Visualizer */
+.range-visualizer {
+    margin: 2rem 0;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.range-label {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #444;
+}
+
+.bar-container {
+    position: relative;
+    height: 40px;
+    background: #e9ecef;
+    border-radius: 20px;
+    margin: 1.5rem 0;
+}
+
+.range-bar {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    /* Clip the fair zone */
+}
+
+.fair-zone {
+    position: absolute;
+    height: 100%;
+    background: rgba(39, 174, 96, 0.3);
+    /* Green transparent */
+    border-left: 2px dashed #27ae60;
+    border-right: 2px dashed #27ae60;
+}
+
+.user-marker {
+    position: absolute;
+    top: -10px;
+    /* Pop out of the bar */
+    height: 50px;
+    width: 2px;
+    /* Thin line */
+    background: black;
+    /* Overridden by JS */
+    transform: translateX(-50%);
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.marker-label {
+    position: absolute;
+    top: -25px;
+    background: #333;
+    color: white;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    white-space: nowrap;
+}
+
+.bar-legend {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 0.5rem;
+}
+
+/* Comparison Table */
+.comparison-table {
+    margin-top: 2rem;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.comp-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+.comp-row:last-child {
+    border-bottom: none;
+}
+
+.comp-row.highlight {
+    background: #fff8e1;
+    /* Light yellow boost */
+    font-weight: 700;
+}
+
+.comp-value {
+    font-family: 'Consolas', monospace;
+    /* Number feel */
+    font-weight: 700;
+}
+
+.disclaimer-small {
+    font-size: 0.8rem;
+    color: #999;
+    margin-top: 1.5rem;
+    line-height: 1.4;
+    font-style: italic;
+}
+
+/* Methodology Section */
+.methodology-section {
+    margin-top: 4rem;
+    text-align: center;
+}
+
+.methodology-section h3 {
+    margin-bottom: 2rem;
+    color: var(--secondary-color);
+}
+
+.trust-grid-small {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.trust-item {
+    flex: 1;
+    min-width: 200px;
+    padding: 1.5rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.trust-item .icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.trust-item h4 {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.trust-item p {
+    font-size: 0.9rem;
+    color: #666;
+}

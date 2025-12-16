@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <!-- Homepage -->
+    <url>
+        <loc>https://solarcostindia.com/</loc>
+        <lastmod>2025-12-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    
+    <!-- Solar Calculator -->
+    <url>
+        <loc>https://solarcostindia.com/solar-calculator.html</loc>
+        <lastmod>2025-12-16</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <!-- Quote Checker -->
+    <url>
+        <loc>https://solarcostindia.com/is-my-solar-quote-fair.html</loc>
+        <lastmod>2025-12-16</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- Apartment Solar -->
+    <url>
+        <loc>https://solarcostindia.com/solar-for-apartments.html</loc>
+        <lastmod>2025-12-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Main Content Pages -->
+    <url>
+        <loc>https://solarcostindia.com/solar-cost-india.html</loc>
+        <lastmod>2025-12-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://solarcostindia.com/solar-installation-guide.html</loc>
+        <lastmod>2025-12-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://solarcostindia.com/solar-vs-grid-electricity.html</loc>
+        <lastmod>2025-12-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- State Pages -->
+    <url>
+        <loc>https://solarcostindia.com/solar-cost/maharashtra.html</loc>
+        <lastmod>2025-12-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://solarcostindia.com/solar-cost/karnataka.html</loc>
+        <lastmod>2025-12-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://solarcostindia.com/solar-cost/gujarat.html</loc>
+        <lastmod>2025-12-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://solarcostindia.com/solar-cost/delhi-ncr.html</loc>
+        <lastmod>2025-12-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- City Pages -->
+    <url>
+        <loc>https://solarcostindia.com/solar-cost/maharashtra/pune.html</loc>
+        <lastmod>2025-12-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://solarcostindia.com/solar-cost/maharashtra/mumbai.html</loc>
+        <lastmod>2025-12-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- Legal Pages -->
+    <url>
+        <loc>https://solarcostindia.com/privacy-policy.html</loc>
+        <lastmod>2025-12-15</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    
+    <url>
+        <loc>https://solarcostindia.com/terms-of-service.html</loc>
+        <lastmod>2025-12-15</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    
+    <!-- Info Pages -->
+    <url>
+        <loc>https://solarcostindia.com/about.html</loc>
+        <lastmod>2025-12-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://solarcostindia.com/contact.html</loc>
+        <lastmod>2025-12-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+</urlset>

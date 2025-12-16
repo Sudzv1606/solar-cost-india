@@ -1,0 +1,228 @@
+/* Apartment Solar Page Styles */
+
+/* --- Hero Section --- */
+.hero-apartment {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    /* Teal/Green theme for "Community/Environment" vibe */
+    color: white;
+    padding: 6rem 0 3rem;
+    text-align: center;
+}
+
+.hero-apartment h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.hero-apartment p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* --- Educational Section --- */
+.edu-section {
+    padding: 4rem 0;
+    background: #fdfdfd;
+}
+
+.edu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.edu-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    border: 1px solid #eee;
+}
+
+.edu-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+/* --- Checker Tool Section --- */
+.checker-tool-section {
+    padding: 4rem 0;
+    background: #fff;
+}
+
+.checker-container {
+    max-width: 800px;
+    /* Focus width */
+    margin: 0 auto;
+}
+
+.input-group-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 600px) {
+    .input-group-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* --- Result Card (Verdict) --- */
+.feasibility-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
+    animation: fadeIn 0.5s ease;
+}
+
+.verdict-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+.verdict-icon {
+    font-size: 2.5rem;
+}
+
+.verdict-sub {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.policy-desc {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+}
+
+.alert-box.warning-soft {
+    background: #fff3cd;
+    border-left: 4px solid #ffc107;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    color: #856404;
+}
+
+.policy-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .policy-details {
+        grid-template-columns: 1fr;
+    }
+}
+
+.detail-block h4 {
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+.detail-block ul {
+    list-style-type: disc;
+    padding-left: 1.2rem;
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+.detail-block ul li {
+    margin-bottom: 0.5rem;
+}
+
+.highlight-block {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+}
+
+.clean-list {
+    list-style-type: none !important;
+    padding-left: 0 !important;
+}
+
+.clean-list li {
+    margin-bottom: 0.8rem !important;
+    padding: 0;
+}
+
+.action-footer {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 0.95rem;
+    color: #666;
+    border-top: 1px dashed #ddd;
+    padding-top: 1rem;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- Guide Section --- */
+.guide-section {
+    padding: 4rem 0;
+    background: #f9f9f9;
+}
+
+.guide-box {
+    background: white;
+    padding: 3rem;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* --- Utilities --- */
+.section-header {
+    margin-bottom: 3rem;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.section-header h2 {
+    font-size: 2.2rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.section-header p {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+}

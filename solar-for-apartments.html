@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Can Apartments Get Solar? | Society Solar Checker India</title>
+    <meta name="description"
+        content="Living in a flat? Check if your state allows solar for apartments (Shared Benefits/Virtual Net Metering). A simple guide for society residents.">
+    <link rel="canonical" href="https://solarcostindia.com/solar-for-apartments.html" />
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/apartment.css">
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://solarcostindia.com/solar-for-apartments.html">
+    <meta property="og:title" content="Can Apartments Get Solar? - Feasibility Checker">
+    <meta property="og:description"
+        content="Don't assume it's impossible. Check if your state supports Virtual Net Metering or Common Area Solar for housing societies.">
+    <meta property="og:image" content="https://solarcostindia.com/images/og-image.jpg">
+
+    <!-- Schema: Guide/Tool -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Apartment Solar Feasibility Checker",
+      "url": "https://solarcostindia.com/solar-for-apartments.html",
+      "description": "Checks state solar policies for apartment complexes and housing societies in India.",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "Any",
+      "author": {
+        "@type": "Organization",
+        "name": "Solar Cost India"
+      }
+    }
+    </script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="/" class="logo-link">
+                        <span class="logo-text">Solar Cost India</span>
+                    </a>
+                    <p class="logo-subtitle">India's Solar Decision Platform</p>
+                </div>
+                <!-- Main Nav -->
+                <ul class="nav-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/solar-calculator.html">Calculator</a></li>
+                    <li><a href="/is-my-solar-quote-fair.html">Check Quote</a></li>
+                    <li><a href="/solar-cost-india.html">Costs</a></li>
+                    <li><a href="/solar-for-apartments.html" class="active">Apartments</a></li> <!-- Active Link -->
+                </ul>
+                <div class="hamburger" aria-label="Toggle menu" role="button">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero -->
+        <section class="hero-apartment">
+            <div class="container">
+                <h1>Can apartment residents benefit from solar?</h1>
+                <p>The answer depends on your state policy, society rules, and rooftop availability.</p>
+                <div
+                    style="margin-top: 10px; font-size: 0.85rem; background: rgba(0,0,0,0.2); display: inline-block; padding: 4px 12px; border-radius: 20px;">
+                    ✅ Policy data verified: March 2025
+                </div>
+            </div>
+        </section>
+
+        <!-- Educational: The Problem -->
+        <section class="edu-section">
+            <div class="container">
+                <div class="section-header center-text">
+                    <h2>Why is it different for flats?</h2>
+                    <p>Unlike independent houses, you share the roof and the rules.</p>
+                </div>
+                <div class="edu-grid">
+                    <div class="edu-card">
+                        <span class="edu-icon">🏢</span>
+                        <h3>One Roof, Many Meters</h3>
+                        <p>Physically, the roof belongs to everyone. Connecting one plant to 100+ individual meters
+                            requires specific "Virtual Metering" technology.</p>
+                    </div>
+                    <div class="edu-card">
+                        <span class="edu-icon">📜</span>
+                        <h3>State Policy is Key</h3>
+                        <p>Some states (like Maharashtra & Delhi) allow "shared benefits". Others only allow solar for
+                            common area lights & lifts.</p>
+                    </div>
+                    <div class="edu-card">
+                        <span class="edu-icon">🤝</span>
+                        <h3>Society Consent</h3>
+                        <p>You cannot install typical private solar without RWA Permission. It's a community project,
+                            not a personal one.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tool: Feasibility Checker -->
+        <section class="checker-tool-section" id="feasibility-tool">
+            <div class="container checker-container">
+                <div class="data-card input-card">
+                    <div class="card-header">
+                        <h2>Society Feasibility Checker</h2>
+                        <p>Select your location to see if regulations support apartment solar.</p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="state-select">Select Your State</label>
+                        <select id="state-select">
+                            <option value="" disabled selected>-- Choose State --</option>
+                            <option value="maharashtra">Maharashtra</option>
+                            <option value="delhi">Delhi / NCR</option>
+                            <option value="karnataka">Karnataka</option>
+                            <option value="gujarat">Gujarat</option>
+                            <option value="default">Other State</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="rooftop-access">Does your society have a usable terrace?</label>
+                        <select id="rooftop-access">
+                            <option value="full">Yes, we have full terrace access</option>
+                            <option value="partial">Partial / Cluttered (Water tanks, etc.)</option>
+                            <option value="none">No, we don't have roof access</option>
+                        </select>
+                    </div>
+
+                    <button id="check-feasibility-btn" class="cta-button-primary full-width">Check Feasibility
+                        →</button>
+
+                    <!-- Result Injection -->
+                    <div id="feasibility-result" class="hidden">
+                        <div id="result-content"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Guide: Talking to RWA -->
+        <section class="guide-section">
+            <div class="container">
+                <div class="guide-box">
+                    <h2>Talking to your society about solar</h2>
+                    <p>Most RWAs reject solar because they fear damage to the roof or complex billing. Here is how to
+                        start a productive conversation:</p>
+
+                    <div style="margin-top: 2rem;">
+                        <h3>1. Start with "Common Areas"</h3>
+                        <p>Don't ask for personal solar first. Propose solar for <strong>Lifts, Pumps, and Corridor
+                                Lighting</strong>. This creates immediate savings on the Maintenance Bill, benefiting
+                            everyone (even ground floor residents).</p>
+                    </div>
+
+                    <div style="margin-top: 1.5rem;">
+                        <h3>2. Address "Roof Rights"</h3>
+                        <p>Clarify that the solar plant is a <strong>temporary asset</strong>. It does not transfer
+                            ownership of the roof. The terrace remains common property.</p>
+                    </div>
+
+                    <div style="margin-top: 1.5rem;">
+                        <h3>3. Check for "Group Metering"</h3>
+                        <p>If you are in a supported state (like Delhi/Maharashtra), bring the official policy circular
+                            to the meeting. Show that it is <strong>legal and standard</strong>.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section brand-section">
+                    <h4>Solar Cost India</h4>
+                    <p class="footer-tagline">India's most honest solar cost calculator</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Tools</h4>
+                    <ul>
+                        <li><a href="/solar-calculator.html">Cost Calculator</a></li>
+                        <li><a href="/is-my-solar-quote-fair.html">Quote Checker</a></li>
+                        <li><a href="/solar-for-apartments.html">Apartment Solar</a></li> <!-- Footer Link -->
+                        <li><a href="/solar-cost-india.html">Market Rates</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="/about.html">About Us</a></li>
+                        <li><a href="/contact.html">Contact</a></li>
+                        <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="/disclaimer.html">Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; 2025 Solar Cost India. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/js/mobile-nav.js"></script>
+    <script src="/js/apartment-data.js"></script>
+    <script src="/js/apartment-checker.js"></script>
+</body>
+
+</html>

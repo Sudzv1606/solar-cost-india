@@ -1,0 +1,11 @@
+node_modules/
+.DS_Store
+Thumbs.db
+*.log
+.vscode/
+.idea/
+*.pyc
+__pycache__/
+dist/
+tmp/
+.env

@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar Calculator India - Calculate Costs, Subsidy & ROI for Your Home</title>
+    <link rel="canonical" href="https://solarcostindia.com/solar-calculator.html" />
+    <meta name="description"
+        content="Free solar calculator for Indian homes. Get instant cost estimates, subsidy calculations, and ROI analysis for your location.">
+    <link rel="stylesheet" href="/css/styles.css?v=10">
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://solarcostindia.com/solar-calculator.html">
+    <meta property="og:title" content="Solar Rooftop Calculator India | Check Cost & Subsidy">
+    <meta property="og:description"
+        content="Get a precise estimate for your home solar system. Details include PM-Surya Ghar subsidy, state policies, and ROI.">
+    <meta property="og:image" content="https://solarcostindia.com/images/og-calculator.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://solarcostindia.com/solar-calculator.html">
+    <meta property="twitter:title" content="Solar Cost Calculator - Calculate Your Savings">
+    <meta property="twitter:description"
+        content="Free solar cost calculator for India. Get instant estimates for system size, costs, subsidies, and payback period.">
+    <meta property="twitter:image" content="https://solarcostindia.com/images/og-calculator.jpg">
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Solar Cost Calculator",
+      "url": "https://solarcostindia.com/solar-calculator.html",
+      "description": "Calculate solar installation costs, subsidies, and ROI for your home in India",
+      "applicationCategory": "UtilityApplication",
+      "operatingSystem": "Any",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR"
+      },
+      "featureList": [
+        "Calculate system size based on electricity bill",
+        "Estimate installation costs by state and city",
+        "Calculate central government subsidies",
+        "Estimate payback period and ROI",
+        "Location-specific pricing"
+      ]
+    }
+    </script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="/" class="logo-link">
+                        <span class="logo-text">Solar
+                            Cost India</span>
+                    </a>
+                    <p class="logo-subtitle">India's Solar Decision Platform</p>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/solar-calculator.html">Calculator</a></li>
+                    <li><a href="/is-my-solar-quote-fair.html">Check Quote</a></li>
+                    <li><a href="/solar-cost-india.html">Solar Costs</a></li>
+                    <li><a href="/about.html">About</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Solar Calculator India</h1>
+                <p>Instant cost estimates, subsidy calculations, and ROI analysis for your home</p>
+                <a href="#calculator-form" class="cta-button">Get My Estimate</a>
+            </div>
+        </section>
+
+        <section id="calculator-form" class="calculator-section">
+            <div class="container">
+                <div class="calculator-intro">
+                    <h2>Get Your Solar Estimate</h2>
+                    <p>Instant calculation based on your location and electricity usage</p>
+                </div>
+
+                <div class="location-prompt" id="locationPrompt">
+                    <div class="prompt-content">
+                        <h3>📍 Select Your State for Accurate Pricing</h3>
+                        <p>Solar costs vary by state. Choose yours for precise estimates.</p>
+                        <div class="quick-states">
+                            <button onclick="selectState('maharashtra')" class="state-btn">Maharashtra</button>
+                            <button onclick="selectState('karnataka')" class="state-btn">Karnataka</button>
+                            <button onclick="selectState('gujarat')" class="state-btn">Gujarat</button>
+                            <button onclick="selectState('delhi')" class="state-btn">Delhi</button>
+                            <button onclick="selectState('tamil-nadu')" class="state-btn">Tamil Nadu</button>
+                            <button onclick="scrollToCalculator()" class="state-btn secondary">Other States</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="calculator-container">
+                    <!-- Progress Indicator -->
+                    <div class="progress-indicator">
+                        <div class="progress-steps">
+                            <div class="progress-step active" data-step="1">
+                                <div class="progress-dot"></div>
+                                <span class="progress-label">Usage</span>
+                            </div>
+                            <div class="progress-line"></div>
+                            <div class="progress-step" data-step="2">
+                                <div class="progress-dot"></div>
+                                <span class="progress-label">Location</span>
+                            </div>
+                            <div class="progress-line"></div>
+                            <div class="progress-step" data-step="3">
+                                <div class="progress-dot"></div>
+                                <span class="progress-label">Roof</span>
+                            </div>
+                        </div>
+                        <p class="progress-text">Step 1 of 3 — Electricity usage</p>
+                    </div>
+
+                    <form id="solarCalculator" class="calculator-form">
+                        <!-- STEP 1: Electricity Usage -->
+                        <div class="calculator-step active" data-step="1">
+                            <h3 class="step-title">Your electricity usage</h3>
+
+                            <div class="form-group hero-input">
+                                <label for="monthlyBill">Monthly Electricity Bill</label>
+                                <div class="bill-input-wrapper">
+                                    <input type="number" id="monthlyBill" min="500" max="15000" value="3000" required
+                                        oninput="updateSliderValue(this.value); checkStep1()">
+                                    <input type="range" id="billSlider" min="500" max="15000" value="3000" step="100"
+                                        oninput="updateBillValue(this.value)">
+                                </div>
+                                <small class="helper-text">We use this to estimate your solar system size</small>
+                            </div>
+
+                            <button type="button" class="btn-continue" onclick="goToStep(2)" disabled
+                                id="step1Continue">
+                                Continue →
+                            </button>
+                        </div>
+
+                        <!-- STEP 2: Location Context -->
+                        <div class="calculator-step" data-step="2">
+                            <h3 class="step-title">Where is your home located?</h3>
+
+                            <div class="form-group">
+                                <label for="state">State</label>
+                                <select id="state" required onchange="updateCities(this.value); checkStep2()">
+                                    <option value="">Choose your state</option>
+                                    <option value="maharashtra">Maharashtra</option>
+                                    <option value="karnataka">Karnataka</option>
+                                    <option value="gujarat">Gujarat</option>
+                                    <option value="tamil-nadu">Tamil Nadu</option>
+                                    <option value="delhi">Delhi</option>
+                                    <option value="uttar-pradesh">Uttar Pradesh</option>
+                                    <option value="rajasthan">Rajasthan</option>
+                                    <option value="madhya-pradesh">Madhya Pradesh</option>
+                                    <option value="west-bengal">West Bengal</option>
+                                    <option value="andhra-pradesh">Andhra Pradesh</option>
+                                    <option value="telangana">Telangana</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="city">City <span class="optional-label">(optional, improves
+                                        accuracy)</span></label>
+                                <select id="city">
+                                    <option value="">Select city</option>
+                                </select>
+                            </div>
+
+                            <div class="discom-chip" id="discomChip" style="display: none;">
+                                <span class="chip-label">Electricity provider:</span>
+                                <span class="chip-value" id="discomDisplay">-</span>
+                            </div>
+
+                            <small class="helper-text location-helper">Location affects tariffs, approvals, and solar
+                                costs</small>
+
+                            <div class="step-navigation">
+                                <button type="button" class="btn-back" onclick="goToStep(1)">← Back</button>
+                                <button type="button" class="btn-continue" onclick="goToStep(3)" disabled
+                                    id="step2Continue">
+                                    Continue →
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- STEP 3: Roof & Feasibility -->
+                        <div class="calculator-step" data-step="3">
+                            <h3 class="step-title">Roof & feasibility</h3>
+
+                            <div class="form-group">
+                                <label>Home Type</label>
+                                <div class="card-grid">
+                                    <div class="selection-card" onclick="selectCard(this, 'homeType', 'independent')">
+                                        <div class="card-icon">🏘️</div>
+                                        <div class="card-title">Independent house</div>
+                                        <div class="card-desc">Full roof access</div>
+                                    </div>
+                                    <div class="selection-card" onclick="selectCard(this, 'homeType', 'apartment')">
+                                        <div class="card-icon">🏢</div>
+                                        <div class="card-title">Apartment</div>
+                                        <div class="card-desc">Society approval needed</div>
+                                    </div>
+                                    <div class="selection-card" onclick="selectCard(this, 'homeType', 'farmhouse')">
+                                        <div class="card-icon">🌾</div>
+                                        <div class="card-title">Farmhouse</div>
+                                        <div class="card-desc">Large area available</div>
+                                    </div>
+                                </div>
+                                <input type="hidden" id="homeType" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Roof Ownership</label>
+                                <div class="card-grid">
+                                    <div class="selection-card" onclick="selectCard(this, 'roofOwnership', 'own')">
+                                        <div class="card-icon">✓</div>
+                                        <div class="card-title">Own roof</div>
+                                        <div class="card-desc">Full control</div>
+                                    </div>
+                                    <div class="selection-card" onclick="selectCard(this, 'roofOwnership', 'shared')">
+                                        <div class="card-icon">👥</div>
+                                        <div class="card-title">Shared roof</div>
+                                        <div class="card-desc">Society permission required</div>
+                                    </div>
+                                    <div class="selection-card"
+                                        onclick="selectCard(this, 'roofOwnership', 'no-access')">
+                                        <div class="card-icon">⚠️</div>
+                                        <div class="card-title">No roof access</div>
+                                        <div class="card-desc">Limited options</div>
+                                    </div>
+                                </div>
+                                <input type="hidden" id="roofOwnership" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="roofArea">Available Roof Area</label>
+                                <select id="roofArea" required onchange="checkStep3()">
+                                    <option value="">Select approximate area</option>
+                                    <option value="less-300">Less than 300 sq ft</option>
+                                    <option value="300-600">300–600 sq ft</option>
+                                    <option value="600-1000">600–1000 sq ft</option>
+                                    <option value="1000-1500">1000–1500 sq ft</option>
+                                    <option value="more-1500">More than 1500 sq ft</option>
+                                </select>
+                            </div>
+
+
+
+                            <div class="step-navigation">
+                                <button type="button" class="btn-back" onclick="goToStep(2)">← Back</button>
+                                <button type="submit" class="btn-calculate" id="calculateButton">
+                                    <span class="btn-text">Calculate My Solar Cost</span>
+                                    <span class="btn-loading" style="display: none;">
+                                        <span class="spinner"></span> Analyzing...
+                                    </span>
+                                </button>
+                            </div>
+                            <small class="disclaimer-text">Estimates shown — final costs depend on site survey</small>
+                        </div>
+                    </form>
+
+                    <!-- Hidden DISCOM select (for backend compatibility) -->
+                    <select id="discom" style="display: none;" required>
+                        <option value="">Based on your city</option>
+                    </select>
+
+                    <div id="calculatorResults" class="results-container" style="display: none;">
+                        <!-- Results will be dynamically inserted here -->
+                    </div>
+
+                    <!-- Lead Capture Section (Shown After Results) -->
+                    <div id="leadCaptureSection" class="lead-capture-section" style="display: none;">
+                        <div class="lead-capture-card">
+                            <h4>Want to save this estimate?</h4>
+                            <p>Get updates when solar prices or subsidies change in your city.</p>
+                            <form id="leadCaptureForm" onsubmit="handleLeadSubmit(event)">
+                                <div class="form-row">
+                                    <input type="email" id="leadEmail" placeholder="Enter your email" required>
+                                    <button type="submit">Save Estimate</button>
+                                </div>
+                                <div class="checkbox-row">
+                                    <label>
+                                        <input type="checkbox" id="installerQuotes">
+                                        I may want installer quotes later
+                                    </label>
+                                </div>
+                            </form>
+                            <div id="leadSuccessMsg"
+                                style="display:none; color: green; margin-top: 15px; font-weight: 600;">
+                                Estimate saved! We'll keep you updated.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- How These Estimates Work -->
+                <div class="how-estimates-work">
+                    <h3>How These Estimates Work</h3>
+                    <div class="estimates-grid">
+                        <div class="estimate-item">
+                            <h4>📍 Local Pricing</h4>
+                            <p>Real installation costs from your state. Updated monthly.</p>
+                        </div>
+                        <div class="estimate-item">
+                            <h4>🏛️ Subsidy Rules</h4>
+                            <p>Central subsidy (PM-Surya Ghar) + state subsidies for your location.</p>
+                        </div>
+                        <div class="estimate-item">
+                            <h4>⚡ Your Tariff</h4>
+                            <p>Based on your DISCOM's actual residential rates.</p>
+                        </div>
+                        <div class="estimate-item">
+                            <h4>🌞 Generation</h4>
+                            <p>State-specific solar generation data factoring in weather patterns.</p>
+                        </div>
+                    </div>
+                    <p style="text-align: center; margin-top: 20px; color: #666; font-size: 0.9rem;">
+                        Estimates are typically within 10-15% of actual quotes. Site survey required for final pricing.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <div class="container">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <h4>How accurate are these estimates?</h4>
+                        <p>Our calculator provides estimates within 10-15% of actual quotes. Final costs depend on site
+                            survey, installer choice, and specific components selected.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Is the subsidy guaranteed?</h4>
+                        <p>Central subsidy is available if you meet eligibility criteria. Final approval depends on MNRE
+                            verification and documentation. We show all requirements in results.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>What's not included in the cost?</h4>
+                        <p>Estimates include complete system cost. Not included: any structural reinforcement costs,
+                            additional civil work, or battery backup (if needed).</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>How soon should I install?</h4>
+                        <p>Subsidy amounts may decrease as adoption increases. Current tariffs and subsidy structure
+                            make 2025 a good year for installation.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <!-- Brand Column -->
+                <div class="footer-section brand-section">
+                    <h4>Solar Cost India</h4>
+                    <p class="footer-tagline">India's most honest solar cost calculator</p>
+                    <p class="footer-description">Making solar decisions transparent, data-driven, and bias-free for
+                        Indian homeowners.</p>
+                </div>
+
+                <!-- Tools Column -->
+                <div class="footer-section">
+                    <h4>Tools</h4>
+                    <ul>
+                        <li><a href="/solar-calculator.html">Cost Calculator</a></li>
+                        <li><a href="/is-my-solar-quote-fair.html">Quote Checker</a></li>
+                        <li><a href="/solar-for-apartments.html">Apartment Solar</a></li>
+                        <li><a href="/solar-cost-india.html">Market Rates</a></li>
+                    </ul>
+                </div>
+
+                <!-- Locations Column -->
+                <div class="footer-section">
+                    <h4>Locations</h4>
+                    <ul>
+                        <li><a href="/solar-cost/maharashtra.html">Maharashtra</a></li>
+                        <li><a href="/solar-cost/karnataka.html">Karnataka</a></li>
+                        <li><a href="/solar-cost/gujarat.html">Gujarat</a></li>
+                        <li><a href="/solar-cost/delhi-ncr.html">Delhi NCR</a></li>
+                    </ul>
+                </div>
+
+                <!-- Company Column -->
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="/about.html">About Us</a></li>
+                        <li><a href="/contact.html">Contact</a></li>
+                        <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="/disclaimer.html">Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; 2025 Solar Cost India. All rights reserved.</p>
+                <p class="footer-disclaimer">All estimates are informational, not binding quotes. Final costs depend on
+                    site survey and installer choice. We are not affiliated with any solar installer.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Load Regulations System -->
+    <link rel="stylesheet" href="/css/regulations.css">
+    <script src="/js/regulation-data.js"></script>
+
+    <!-- Load configuration system first -->
+    <script src="/js/calculator-config.js"></script>
+    <script src="/js/calculator-engine.js"></script>
+
+    <!-- Load Smart Insights System (optional for content generation) -->
+    <script src="/js/smart-insights.js"></script>
+
+    <!-- State selection functions -->
+    <script>
+        function selectState(state) {
+            document.getElementById('state').value = state;
+            updateCities(state);
+            document.getElementById('locationPrompt').style.display = 'none';
+            document.querySelector('.calculator-container').scrollIntoView({ behavior: 'smooth' });
+
+            // Trigger state change to update configuration
+            const event = new Event('change');
+            document.getElementById('state').dispatchEvent(event);
+        }
+
+        function scrollToCalculator() {
+            document.getElementById('locationPrompt').style.display = 'none';
+            document.querySelector('.calculator-container').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+
+    <!-- Calculator step navigation script (DESIGN ONLY - no logic changes) -->
+    <script src="/js/calculator-steps.js"></script>
+
+    <!-- Error handler utilities -->
+    <script src="/js/calculator-error-handler.js"></script>
+
+    <!-- Main calculator script -->
+    <script src="/js/calculator.js"></script>
+</body>
+
+</html>
