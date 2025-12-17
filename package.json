@@ -1,0 +1,10 @@
+{
+  "name": "solar-cost-india",
+  "version": "1.0.0",
+  "description": "Static solar decision website",
+  "scripts": {
+    "build": "echo 'Static site detected. skipping build.'"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
