@@ -17,7 +17,7 @@
     <meta name="description"
         content="Is your solar quote too high? Use our free Solar Quote Checker to compare installer prices against official MNRE benchmarks and local market rates in India.">
     <link rel="canonical" href="https://solarcostindia.in/is-my-solar-quote-fair.html" />
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/styles.css?v=12">
     <link rel="stylesheet" href="/css/quote-checker.css">
     <link rel="icon" type="image/png" href="/favicon.png">
 
@@ -63,11 +63,24 @@
                     <p class="logo-subtitle">India's Solar Decision Platform</p>
                 </div>
                 <ul class="nav-links">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/solar-calculator.html">Calculator</a></li>
-                    <li><a href="/is-my-solar-quote-fair.html" class="active">Check Quote</a></li> <!-- New Link -->
-                    <li><a href="/solar-cost-india.html">Costs</a></li>
-                    <li><a href="/about.html">About</a></li>
+                    <li><a href="/" class="">Home</a></li>
+                    <li><a href="/solar-calculator.html" class="">Calculator</a></li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropbtn active">Tools</a>
+                        <div class="dropdown-content">
+                            <a href="/is-my-solar-quote-fair.html" class="active">Check Solar Quote</a>
+                            <a href="/solar-for-apartments.html" class="">Apartment Solar</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropbtn ">Guides</a>
+                        <div class="dropdown-content">
+                            <a href="/solar-subsidy-india-deep-dive-2025.html" class="">Solar Subsidies Explained</a>
+                            <a href="/solar-installation-guide.html" class="">Installation Process</a>
+                        </div>
+                    </li>
+                    <li><a href="/solar-cost-india.html" class="">Solar Costs</a></li>
+                    <li><a href="/about.html" class="">About</a></li>
                 </ul>
                 <div class="hamburger" aria-label="Toggle menu" role="button">
                     <span></span>
@@ -85,7 +98,7 @@
                 <p>Compare your installer's price against government benchmarks and typical market rates.</p>
                 <div
                     style="margin-top: 10px; font-size: 0.85rem; background: rgba(255,255,255,0.1); display: inline-block; padding: 4px 12px; border-radius: 20px;">
-                    âœ… Benchmarks updated: March 2025
+                    ✅ Benchmarks updated: March 2025
                 </div>
             </div>
         </section>
@@ -104,7 +117,7 @@
                             <p class="help-text">The capacity mentioned in your quotation.</p>
                         </div>
                         <div class="form-group">
-                            <label for="total-quote">Total Quoted Price (â‚¹)</label>
+                            <label for="total-quote">Total Quoted Price (₹)</label>
                             <input type="number" id="total-quote" placeholder="e.g. 180000">
                             <p class="help-text">Final amount including Installation & GST.</p>
                         </div>
@@ -119,12 +132,12 @@
                                 <option value="gujarat">Gujarat</option>
                             </select>
                         </div>
-                        <button id="check-quote-btn" class="cta-button-primary full-width">Check My Quote â†’</button>
+                        <button id="check-quote-btn" class="cta-button-primary full-width">Check My Quote →</button>
 
                         <div class="trust-micro">
-                            <span>ðŸ”’ No phone number required</span>
-                            <span>â€¢</span>
-                            <span>âš¡ Instant Verdict</span>
+                            <span>🔒 No phone number required</span>
+                            <span>•</span>
+                            <span>⚡ Instant Verdict</span>
                         </div>
                     </div>
 
@@ -141,19 +154,19 @@
                     <h3>How we determine "Fair"</h3>
                     <div class="trust-grid-small">
                         <div class="trust-item">
-                            <span class="icon">ðŸ›ï¸</span>
+                            <span class="icon">🏛️</span>
                             <h4>MNRE Benchmarks</h4>
                             <p>We use the official Ministry of New & Renewable Energy floor prices (Feb 2024
                                 notification) as the absolute minimum baseline.</p>
                         </div>
                         <div class="trust-item">
-                            <span class="icon">ðŸ“ˆ</span>
+                            <span class="icon">📍</span>
                             <h4>Market Reality</h4>
                             <p>We account for typical installer margins, labour, logistics, and service costs that vary
                                 by city.</p>
                         </div>
                         <div class="trust-item">
-                            <span class="icon">âš–ï¸</span>
+                            <span class="icon">⚠️</span>
                             <h4>Neutral Verdict</h4>
                             <p>We don't sell solar panels. Our "Fair" range is a statistical average, not a sales pitch.
                             </p>
