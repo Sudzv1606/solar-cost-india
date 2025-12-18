@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -18,18 +18,18 @@
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://solarcostindia.com/smart-insights-demo.html">
+    <meta property="og:url" content="https://solarcostindia.in/smart-insights-demo.html">
     <meta property="og:title" content="Smart Insights Demo - Solar Cost India">
     <meta property="og:description"
         content="Enterprise-grade governance for solar content generation. See how our smart insight system ensures compliance and accuracy.">
-    <meta property="og:image" content="https://solarcostindia.com/images/og-image.jpg">
+    <meta property="og:image" content="https://solarcostindia.in/images/og-image.jpg">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://solarcostindia.com/smart-insights-demo.html">
+    <meta property="twitter:url" content="https://solarcostindia.in/smart-insights-demo.html">
     <meta property="twitter:title" content="Smart Insights Demo - Solar Cost India">
     <meta property="twitter:description" content="Enterprise-grade governance for solar content generation.">
-    <meta property="twitter:image" content="https://solarcostindia.com/images/og-image.jpg">
+    <meta property="twitter:image" content="https://solarcostindia.in/images/og-image.jpg">
     <style>
         .demo-container {
             max-width: 1000px;
@@ -127,7 +127,7 @@
 
             <!-- Engine 1 Test -->
             <div class="engine-test">
-                <h3>🧩 Engine 1: National Content Strategist</h3>
+                <h3>ðŸ§© Engine 1: National Content Strategist</h3>
                 <p>Generates pillar-level content for India</p>
                 <button class="test-button" onclick="testEngine('Solar_Pillar_Content_Engine')">
                     Generate National Content
@@ -137,7 +137,7 @@
 
             <!-- Engine 2 Test -->
             <div class="engine-test">
-                <h3>🧩 Engine 2: Calculator Insight Engine</h3>
+                <h3>ðŸ§© Engine 2: Calculator Insight Engine</h3>
                 <p>Explains calculator outputs with proper disclaimers</p>
                 <button class="test-button" onclick="testEngine('Calculator_Insight_Engine')">
                     Explain Calculator Results
@@ -147,7 +147,7 @@
 
             <!-- Engine 3 Test -->
             <div class="engine-test">
-                <h3>🧩 Engine 3: State & City Localizer</h3>
+                <h3>ðŸ§© Engine 3: State & City Localizer</h3>
                 <p>Localizes content for specific regions</p>
                 <button class="test-button" onclick="testEngine('Solar_Localization_Engine')">
                     Generate Localized Content
@@ -157,7 +157,7 @@
 
             <!-- QA Test with Violation -->
             <div class="engine-test">
-                <h3>🧪 Engine 4: QA & Compliance Guard</h3>
+                <h3>ðŸ§ª Engine 4: QA & Compliance Guard</h3>
                 <p>Detects policy violations in content</p>
                 <button class="test-button" onclick="testQAFailure()">
                     Test QA with Violations
@@ -167,7 +167,7 @@
 
             <!-- Template Tests -->
             <div class="engine-test">
-                <h3>📄 Content Templates</h3>
+                <h3>ðŸ“„ Content Templates</h3>
                 <p>Generate state and city pages using templates</p>
                 <button class="test-button" onclick="generateTemplate('statePage')">
                     Generate State Page
@@ -180,7 +180,7 @@
 
             <!-- Session Report -->
             <div class="engine-test">
-                <h3>📊 Session Report</h3>
+                <h3>ðŸ“Š Session Report</h3>
                 <button class="test-button" onclick="showSessionReport()">
                     Show Session Report
                 </button>
@@ -189,7 +189,7 @@
 
             <!-- Hardening Features Demo -->
             <div class="engine-test">
-                <h3>🔧 Hardening Features Demo</h3>
+                <h3>ðŸ”§ Hardening Features Demo</h3>
                 <p>Test the new QA hardening: config citations, vocabulary checks</p>
                 <button class="test-button" onclick="testHardening()">
                     Test Hardening Features
@@ -262,7 +262,7 @@
                         <div style="margin: 10px 0;">
                             <strong>Config Citations:</strong>
                             <ul style="font-size: 0.9rem; color: #666;">
-                                ${result.qa.citations.map(c => `<li>${c.number} → ${c.source}</li>`).join('')}
+                                ${result.qa.citations.map(c => `<li>${c.number} â†’ ${c.source}</li>`).join('')}
                             </ul>
                         </div>
                     ` : ''}
@@ -294,8 +294,8 @@
 
             // Create content with violations
             const badContent = `
-                <p>Guaranteed solar savings of ₹50,000 per year!</p>
-                <p>The final cost will be exactly ₹2,50,000 for a 5kW system.</p>
+                <p>Guaranteed solar savings of â‚¹50,000 per year!</p>
+                <p>The final cost will be exactly â‚¹2,50,000 for a 5kW system.</p>
                 <p>You will receive the full subsidy amount.</p>
             `;
 
@@ -373,7 +373,7 @@
 
             // Create content with test scenarios
             const testContent = `
-                <p>Solar typically costs around ₹50,000 per kW in most regions.</p>
+                <p>Solar typically costs around â‚¹50,000 per kW in most regions.</p>
                 <p>This is often subject to market conditions and may vary.</p>
                 <p>BEST option guaranteed at exact price!</p>
             `;
@@ -400,16 +400,16 @@
                 <h4>Hardening QA Check: ${qaResult.status}</h4>
 
                 <div style="margin: 15px 0;">
-                    <strong>📍 Config Citations Found:</strong>
+                    <strong>ðŸ“ Config Citations Found:</strong>
                     ${qaResult.citations.length > 0 ? `
                         <ul style="font-size: 0.9rem;">
-                            ${qaResult.citations.map(c => `<li>₹X,X → ${c.source}</li>`).join('')}
+                            ${qaResult.citations.map(c => `<li>â‚¹X,X â†’ ${c.source}</li>`).join('')}
                         </ul>
                     ` : '<p style="color: #666; font-style: italic;">None detected</p>'}
                 </div>
 
                 <div style="margin: 15px 0;">
-                    <strong>📝 Vocabulary Analysis:</strong>
+                    <strong>ðŸ“ Vocabulary Analysis:</strong>
                     ${qaResult.citations && qaResult.citations.length > 0 ? `
                         <ul style="font-size: 0.9rem;">
                             ${qaResult.citations.map(c => c.source).map(s => `<li>Safe words detected in context</li>`).join('')}
@@ -418,14 +418,14 @@
                 </div>
 
                 <div style="margin: 15px 0;">
-                    <strong>⚠️ Violations:</strong>
+                    <strong>âš ï¸ Violations:</strong>
                     ${qaResult.violations.length > 0 ? `
                         <div class="violations">
                             <ul>
                                 ${qaResult.violations.map(v => `<li>${v}</li>`).join('')}
                             </ul>
                         </div>
-                    ` : '<p style="color: #28a745;">✅ No violations detected</p>'}
+                    ` : '<p style="color: #28a745;">âœ… No violations detected</p>'}
                 </div>
 
                 <div style="margin-top: 15px;">

@@ -1,11 +1,12 @@
-User-agent: *
+﻿User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://solarcostindia.com/sitemap.xml
+Sitemap: https://solarcostindia.in/sitemap.xml
 
 # Crawl-delay
 Crawl-delay: 10
 
 # Disallow certain paths
 Disallow: /*.json$
+

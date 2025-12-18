@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -14,7 +14,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Solar Calculator India - Calculate Costs, Subsidy & ROI for Your Home</title>
-    <link rel="canonical" href="https://solarcostindia.com/solar-calculator.html" />
+    <link rel="canonical" href="https://solarcostindia.in/solar-calculator.html" />
     <meta name="description"
         content="Free solar calculator for Indian homes. Get instant cost estimates, subsidy calculations, and ROI analysis for your location.">
     <link rel="stylesheet" href="/css/styles.css?v=10">
@@ -22,19 +22,19 @@
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://solarcostindia.com/solar-calculator.html">
+    <meta property="og:url" content="https://solarcostindia.in/solar-calculator.html">
     <meta property="og:title" content="Solar Rooftop Calculator India | Check Cost & Subsidy">
     <meta property="og:description"
         content="Get a precise estimate for your home solar system. Details include PM-Surya Ghar subsidy, state policies, and ROI.">
-    <meta property="og:image" content="https://solarcostindia.com/images/og-calculator.jpg">
+    <meta property="og:image" content="https://solarcostindia.in/images/og-calculator.jpg">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://solarcostindia.com/solar-calculator.html">
+    <meta property="twitter:url" content="https://solarcostindia.in/solar-calculator.html">
     <meta property="twitter:title" content="Solar Cost Calculator - Calculate Your Savings">
     <meta property="twitter:description"
         content="Free solar cost calculator for India. Get instant estimates for system size, costs, subsidies, and payback period.">
-    <meta property="twitter:image" content="https://solarcostindia.com/images/og-calculator.jpg">
+    <meta property="twitter:image" content="https://solarcostindia.in/images/og-calculator.jpg">
 
     <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
@@ -42,7 +42,7 @@
       "@context": "https://schema.org",
       "@type": "WebApplication",
       "name": "Solar Cost Calculator",
-      "url": "https://solarcostindia.com/solar-calculator.html",
+      "url": "https://solarcostindia.in/solar-calculator.html",
       "description": "Calculate solar installation costs, subsidies, and ROI for your home in India",
       "applicationCategory": "UtilityApplication",
       "operatingSystem": "Any",
@@ -103,7 +103,7 @@
 
                 <div class="location-prompt" id="locationPrompt">
                     <div class="prompt-content">
-                        <h3>📍 Select Your State for Accurate Pricing</h3>
+                        <h3>ðŸ“ Select Your State for Accurate Pricing</h3>
                         <p>Solar costs vary by state. Choose yours for precise estimates.</p>
                         <div class="quick-states">
                             <button onclick="selectState('maharashtra')" class="state-btn">Maharashtra</button>
@@ -135,7 +135,7 @@
                                 <span class="progress-label">Roof</span>
                             </div>
                         </div>
-                        <p class="progress-text">Step 1 of 3 — Electricity usage</p>
+                        <p class="progress-text">Step 1 of 3 â€” Electricity usage</p>
                     </div>
 
                     <form id="solarCalculator" class="calculator-form">
@@ -156,7 +156,7 @@
 
                             <button type="button" class="btn-continue" onclick="goToStep(2)" disabled
                                 id="step1Continue">
-                                Continue →
+                                Continue â†’
                             </button>
                         </div>
 
@@ -199,10 +199,10 @@
                                 costs</small>
 
                             <div class="step-navigation">
-                                <button type="button" class="btn-back" onclick="goToStep(1)">← Back</button>
+                                <button type="button" class="btn-back" onclick="goToStep(1)">â† Back</button>
                                 <button type="button" class="btn-continue" onclick="goToStep(3)" disabled
                                     id="step2Continue">
-                                    Continue →
+                                    Continue â†’
                                 </button>
                             </div>
                         </div>
@@ -215,17 +215,17 @@
                                 <label>Home Type</label>
                                 <div class="card-grid">
                                     <div class="selection-card" onclick="selectCard(this, 'homeType', 'independent')">
-                                        <div class="card-icon">🏘️</div>
+                                        <div class="card-icon">ðŸ˜ï¸</div>
                                         <div class="card-title">Independent house</div>
                                         <div class="card-desc">Full roof access</div>
                                     </div>
                                     <div class="selection-card" onclick="selectCard(this, 'homeType', 'apartment')">
-                                        <div class="card-icon">🏢</div>
+                                        <div class="card-icon">ðŸ¢</div>
                                         <div class="card-title">Apartment</div>
                                         <div class="card-desc">Society approval needed</div>
                                     </div>
                                     <div class="selection-card" onclick="selectCard(this, 'homeType', 'farmhouse')">
-                                        <div class="card-icon">🌾</div>
+                                        <div class="card-icon">ðŸŒ¾</div>
                                         <div class="card-title">Farmhouse</div>
                                         <div class="card-desc">Large area available</div>
                                     </div>
@@ -237,18 +237,18 @@
                                 <label>Roof Ownership</label>
                                 <div class="card-grid">
                                     <div class="selection-card" onclick="selectCard(this, 'roofOwnership', 'own')">
-                                        <div class="card-icon">✓</div>
+                                        <div class="card-icon">âœ“</div>
                                         <div class="card-title">Own roof</div>
                                         <div class="card-desc">Full control</div>
                                     </div>
                                     <div class="selection-card" onclick="selectCard(this, 'roofOwnership', 'shared')">
-                                        <div class="card-icon">👥</div>
+                                        <div class="card-icon">ðŸ‘¥</div>
                                         <div class="card-title">Shared roof</div>
                                         <div class="card-desc">Society permission required</div>
                                     </div>
                                     <div class="selection-card"
                                         onclick="selectCard(this, 'roofOwnership', 'no-access')">
-                                        <div class="card-icon">⚠️</div>
+                                        <div class="card-icon">âš ï¸</div>
                                         <div class="card-title">No roof access</div>
                                         <div class="card-desc">Limited options</div>
                                     </div>
@@ -261,9 +261,9 @@
                                 <select id="roofArea" required onchange="checkStep3()">
                                     <option value="">Select approximate area</option>
                                     <option value="less-300">Less than 300 sq ft</option>
-                                    <option value="300-600">300–600 sq ft</option>
-                                    <option value="600-1000">600–1000 sq ft</option>
-                                    <option value="1000-1500">1000–1500 sq ft</option>
+                                    <option value="300-600">300â€“600 sq ft</option>
+                                    <option value="600-1000">600â€“1000 sq ft</option>
+                                    <option value="1000-1500">1000â€“1500 sq ft</option>
                                     <option value="more-1500">More than 1500 sq ft</option>
                                 </select>
                             </div>
@@ -271,7 +271,7 @@
 
 
                             <div class="step-navigation">
-                                <button type="button" class="btn-back" onclick="goToStep(2)">← Back</button>
+                                <button type="button" class="btn-back" onclick="goToStep(2)">â† Back</button>
                                 <button type="submit" class="btn-calculate" id="calculateButton">
                                     <span class="btn-text">Calculate My Solar Cost</span>
                                     <span class="btn-loading" style="display: none;">
@@ -279,7 +279,7 @@
                                     </span>
                                 </button>
                             </div>
-                            <small class="disclaimer-text">Estimates shown — final costs depend on site survey</small>
+                            <small class="disclaimer-text">Estimates shown â€” final costs depend on site survey</small>
                         </div>
                     </form>
 
@@ -322,19 +322,19 @@
                     <h3>How These Estimates Work</h3>
                     <div class="estimates-grid">
                         <div class="estimate-item">
-                            <h4>📍 Local Pricing</h4>
+                            <h4>ðŸ“ Local Pricing</h4>
                             <p>Real installation costs from your state. Updated monthly.</p>
                         </div>
                         <div class="estimate-item">
-                            <h4>🏛️ Subsidy Rules</h4>
+                            <h4>ðŸ›ï¸ Subsidy Rules</h4>
                             <p>Central subsidy (PM-Surya Ghar) + state subsidies for your location.</p>
                         </div>
                         <div class="estimate-item">
-                            <h4>⚡ Your Tariff</h4>
+                            <h4>âš¡ Your Tariff</h4>
                             <p>Based on your DISCOM's actual residential rates.</p>
                         </div>
                         <div class="estimate-item">
-                            <h4>🌞 Generation</h4>
+                            <h4>ðŸŒž Generation</h4>
                             <p>State-specific solar generation data factoring in weather patterns.</p>
                         </div>
                     </div>
