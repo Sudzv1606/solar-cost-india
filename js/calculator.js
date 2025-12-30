@@ -112,6 +112,17 @@ function handleCalculatorSubmit(e) {
             location: getLocationDisplayName(state, city)
         };
 
+        // Track calculation with user type segmentation
+        if (typeof gtag === 'function') {
+            const isRestored = sessionStorage.getItem('restored_from_share') === 'true';
+
+            gtag('event', 'calculator_submit', {
+                state: state,
+                has_city: !!city,
+                user_type: isRestored ? 'shared_link_user' : 'organic_user'
+            });
+        }
+
         // Perform calculation using the engine
         calculationResults = calculatorEngine.calculate(inputs, config);
 
@@ -138,6 +149,14 @@ function handleCalculatorSubmit(e) {
  */
 async function displayResults(results) {
     const resultsContainer = document.getElementById('calculatorResults');
+
+    // Add timestamp for print/PDF
+    const timestamp = new Date().toLocaleDateString('en-IN', {
+        day: 'numeric',
+        month: 'short',
+        year: 'numeric'
+    });
+    resultsContainer.setAttribute('data-generated-timestamp', timestamp);
 
     // Generate HTML for results
     const resultsHTML = generateResultsHTML(results);
@@ -199,12 +218,49 @@ function generateResultsHTML(results) {
     const financial = results.financial;
     const info = results.info;
 
+    // Get input values for summary
+    const bill = document.getElementById('monthlyBill')?.value || 'N/A';
+    const state = document.getElementById('state')?.value || 'N/A';
+    const city = document.getElementById('city')?.value || '';
+    const location = city ? `${getCitiesForState(state)[city] || city}, ${getStatesList()[state] || state}` : (getStatesList()[state] || 'India (National Average)');
+
     return `
         <div class="results-header">
             <h3>Your Solar Estimate</h3>
             <p class="result-label">${info.resultLabel}</p>
             ${info.fallbackMessage ? `<p class="fallback-message">${info.fallbackMessage}</p>` : ''}
         </div>
+
+        <!-- INPUT SUMMARY (visible in print/PDF) -->
+        <div class="input-summary">
+            <h5>Input Summary</h5>
+            <ul style="margin: 0; padding-left: 1.2rem;">
+                <li>Monthly Electricity Bill: ₹${formatIndianNumber(bill)}</li>
+                <li>Location: ${location}</li>
+                <li>Generation: ${system.monthlyGeneration} units/month (estimated)</li>
+            </ul>
+        </div>
+
+        <!-- SHARE ACTIONS -->
+        <div class="share-actions">
+            <h4>Share Your Estimate</h4>
+            <div class="share-buttons">
+                <button onclick="shareResults.copyLink()" class="share-btn copy-btn">
+                    <span class="btn-icon">🔗</span>
+                    <span class="btn-text">Copy Link</span>
+                </button>
+                <button onclick="shareResults.downloadPDF()" class="share-btn pdf-btn">
+                    <span class="btn-icon">📄</span>
+                    <span class="btn-text">Download PDF</span>
+                </button>
+                <button onclick="shareResults.shareWhatsApp()" class="share-btn whatsapp-btn">
+                    <span class="btn-icon">💬</span>
+                    <span class="btn-text">WhatsApp</span>
+                </button>
+            </div>
+            <div class="share-feedback" id="shareFeedback" style="display:none;"></div>
+        </div>
+        <!-- END SHARE ACTIONS -->
 
         <!-- INSIDER CONTEXT INJECTION -->
         ${(function () {
