@@ -1,2 +1,29 @@
 # Force HTTPS
 http://* https://:splat 301
+
+# Clean URL Enforcement (.html -> Clean)
+/*.html /:splat 301
+/about.html /about 301
+/contact.html /contact 301
+/disclaimer.html /disclaimer 301
+/is-my-solar-quote-fair.html /is-my-solar-quote-fair 301
+/privacy-policy.html /privacy-policy 301
+/smart-insights-demo.html /smart-insights-demo 301
+/solar-calculator.html /solar-calculator 301
+/solar-cost-india.html /solar-cost-india 301
+/solar-cost-maharashtra.html /solar-cost-maharashtra 301
+/solar-for-apartments.html /solar-for-apartments 301
+/solar-installation-cost-mumbai.html /solar-installation-cost-mumbai 301
+/solar-installation-cost-nagpur.html /solar-installation-cost-nagpur 301
+/solar-installation-guide.html /solar-installation-guide 301
+/solar-subsidy-india-deep-dive-2025.html /solar-subsidy-india-deep-dive-2025 301
+/solar-vs-grid-electricity-maharashtra.html /solar-vs-grid-electricity-maharashtra 301
+/solar-vs-grid-electricity.html /solar-vs-grid-electricity 301
+/terms-of-service.html /terms-of-service 301
+/solar-cost/delhi-ncr.html /solar-cost/delhi-ncr 301
+/solar-cost/gujarat.html /solar-cost/gujarat 301
+/solar-cost/karnataka.html /solar-cost/karnataka 301
+/solar-cost/maharashtra.html /solar-cost/maharashtra 301
+/solar-cost/karnataka/bangalore.html /solar-cost/karnataka/bangalore 301
+/solar-cost/maharashtra/mumbai.html /solar-cost/maharashtra/mumbai 301
+/solar-cost/maharashtra/pune.html /solar-cost/maharashtra/pune 301
