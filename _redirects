@@ -1,6 +1,28 @@
 # Force HTTPS
 http://* https://:splat 301
 
-# Optional: Redirect .html to clean URL (Use with caution, Cloudflare might do this automatically)
-# /index.html / 301
-# /*.html /:splat 301
+# Enforce .html URLs (Clean -> .html)
+/about /about.html 301
+/contact /contact.html 301
+/disclaimer /disclaimer.html 301
+/is-my-solar-quote-fair /is-my-solar-quote-fair.html 301
+/privacy-policy /privacy-policy.html 301
+/smart-insights-demo /smart-insights-demo.html 301
+/solar-calculator /solar-calculator.html 301
+/solar-cost-india /solar-cost-india.html 301
+/solar-cost-maharashtra /solar-cost-maharashtra.html 301
+/solar-for-apartments /solar-for-apartments.html 301
+/solar-installation-cost-mumbai /solar-installation-cost-mumbai.html 301
+/solar-installation-cost-nagpur /solar-installation-cost-nagpur.html 301
+/solar-installation-guide /solar-installation-guide.html 301
+/solar-subsidy-india-deep-dive-2025 /solar-subsidy-india-deep-dive-2025.html 301
+/solar-vs-grid-electricity-maharashtra /solar-vs-grid-electricity-maharashtra.html 301
+/solar-vs-grid-electricity /solar-vs-grid-electricity.html 301
+/terms-of-service /terms-of-service.html 301
+/solar-cost/delhi-ncr /solar-cost/delhi-ncr.html 301
+/solar-cost/gujarat /solar-cost/gujarat.html 301
+/solar-cost/karnataka /solar-cost/karnataka.html 301
+/solar-cost/maharashtra /solar-cost/maharashtra.html 301
+/solar-cost/karnataka/bangalore /solar-cost/karnataka/bangalore.html 301
+/solar-cost/maharashtra/mumbai /solar-cost/maharashtra/mumbai.html 301
+/solar-cost/maharashtra/pune /solar-cost/maharashtra/pune.html 301
